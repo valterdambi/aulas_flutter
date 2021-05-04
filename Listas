@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+void main() => runApp(MeuApp());
+class MeuApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final title = 'Lista Básica';
+    return MaterialApp(
+      title: title,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(title),
+        ),
+        body: ListView(
+          children: <Widget>[
+            ListTile(
+              leading: Icon(Icons.map),
+              title: Text('Mapa do Valter'),
+            ),
+            ListTile(
+              leading: Icon(Icons.photo_album),
+              title: Text('Álbum do Valter'),
+            ),
+            ListTile(
+              leading: Icon(Icons.phone),
+              title: Text('Fone do Valter'),
+            ),
+          ],
+        ),
+      ),
+    );
+
+  }
+}
