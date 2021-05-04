@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+void main() => runApp(MyApp());
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('Exibindo imagem local')),
+        body: Column(
+          children: <Widget>[
+            Image.asset(
+              'imagens/logomac.png',
+            ),
+            Text('Minha primeira Imagem')
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+/*
+temos que atualizar o arquivo pubspec.yaml do projecto Flutter definindo uma seção assets e indicar o caminho da imagem:
+assets:
+     - imagens/logomac.png
+*/
